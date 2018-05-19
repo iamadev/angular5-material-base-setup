@@ -1,0 +1,73 @@
+﻿
+<mat-sidenav-container class="example-container">
+    <!--Side Nav-->
+    <mat-sidenav #sidenav mode="over" opened="false" class="example-sidenav">
+        <mat-card style="width: 100%; height: 150px;">
+            <mat-card-header>
+                <div mat-card-avatar class="profile-image"></div>
+                <mat-card-title>Name</mat-card-title>
+                <mat-card-subtitle>Title</mat-card-subtitle>
+            </mat-card-header>
+        </mat-card>
+        <mat-list>
+            <mat-list-item>Current Match</mat-list-item>
+            <mat-list-item>Profile</mat-list-item>
+            <mat-list-item>Previous Matches</mat-list-item>
+            <mat-list-item>Send Match Score</mat-list-item>
+            <mat-list-item>Log Out</mat-list-item>
+        </mat-list>
+    </mat-sidenav>
+    <!--page content-->
+    <div class="example-sidenav-content">
+        <!--Menu Bar-->
+        <mat-toolbar color="primary">
+            <button mat-button (click)="sidenav.open()">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <span>ScoreBoard</span><span class="example-spacer"></span>
+        </mat-toolbar>
+        <!--Team Summary-->
+        <mat-card>
+            <table style="width: 100%">
+                <tr>
+                    <th style="width: 50%; text-align: left;">
+                        <div mat-card-avatar class="profile-image" style="display: inline;"></div>
+                        <label style="display: inline;">Team A</label>
+                    </th>
+                    <th style="width: 50%; text-align: left;">
+                        <div mat-card-avatar class="profile-image" style="display: inline;"></div>
+                        <label style="display: inline;">Team B</label>
+                    </th>
+                </tr>
+                <tr>
+                    <td style="width: 50%">Score: 0/0</td>
+                    <td style="width: 50%">Score: 0/0</td>
+                </tr>
+                <tr>
+                    <td style="width: 50%">Overs: 0.0</td>
+                    <td style="width: 50%">Overs: 0.0</td>
+                </tr>
+                <tr>
+                    <td style="width: 50%">C.R.R: 0.00</td>
+                    <td style="width: 50%">C.R.R: 0.00</td>
+                </tr>
+            </table>
+        </mat-card>
+        <!--Batting/Bowling Summary-->
+        <mat-card>
+            
+        </mat-card>
+        <!--Add Score Actions-->
+        <mat-card>
+            <button mat-mini-fab color="primary">0</button>
+            <button mat-mini-fab color="primary">1</button>
+            <button mat-mini-fab color="primary">2</button>
+            <button mat-mini-fab color="primary">3</button>
+            <button mat-mini-fab color="primary">4</button>
+            <button mat-mini-fab color="primary">5</button>
+            <button mat-mini-fab color="primary">6</button>
+        </mat-card>
+        <!--Last 10 balls summary-->
+        <mat-card>Last 10 balls</mat-card>
+    </div>
+</mat-sidenav-container>
